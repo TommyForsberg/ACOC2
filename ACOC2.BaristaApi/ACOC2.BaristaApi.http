@@ -1,0 +1,6 @@
+@ACOC2.BaristaApi_HostAddress = http://localhost:5180
+
+GET {{ACOC2.BaristaApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

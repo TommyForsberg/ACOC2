@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+service BaristaService{
+  rpc ListCoffees (ListCoffeesRequest) returns (ListCoffeesResponse);
+  rpc GetCoffeeById (GetCoffeeByIdRequest) returns (CoffeeDto);
+  rpc CreateCoffee (CreateCoffeeRequest) returns (CoffeeDto);
+}
+
+message ListCoffeesRequest {}
+
+message ListCoffeesResponse {
+  repeated CoffeeDto coffees = 1;
+}
+
+message GetCoffeeByIdRequest {
+  int32 id = 1;
+}
+
+message CreateCoffeeRequest {
+  string name = 1;
+  int32 brewTimeSeconds = 2;
+}
+
+message CoffeeDto {
+  int32 id = 1;
+  string name = 2;
+  int32 brewTimeSeconds = 3;
+}
