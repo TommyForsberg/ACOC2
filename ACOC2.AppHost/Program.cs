@@ -28,6 +28,10 @@ var baristaApi = builder.AddProject<Projects.ACOC2_BaristaApi>("acoc2-baristaapi
                     .WaitFor(bariastaDb)
                     .WithHttpsHealthCheck("/health");
 
+builder.AddProject<Projects.ACOC2_BaristaApi_MigrationService>("barista-migrations")
+    .WithReference(bariastaDb)
+    .WaitFor(bariastaDb);
+
 var apiService = builder.AddProject<Projects.ACOC2_CoffeeApi>("coffeeapi")
     .WithHttpsHealthCheck("/health")
     .WithReference(baristaApi)

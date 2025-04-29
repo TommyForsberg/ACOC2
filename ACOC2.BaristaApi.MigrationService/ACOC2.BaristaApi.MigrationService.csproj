@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-ACOC2.BaristaApi.MigrationService-53b436ff-4b91-4734-b6f3-f4bf50ba1ac9</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Microsoft.EntityFrameworkCore.SqlServer" Version="9.2.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ACOC2.BaristaApi\ACOC2.BaristaApi.csproj" />
+    <ProjectReference Include="..\ACOC2.ServiceDefaults\ACOC2.ServiceDefaults.csproj" />
+  </ItemGroup>
+</Project>
